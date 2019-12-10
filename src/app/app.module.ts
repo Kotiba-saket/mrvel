@@ -3,16 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { MarvelComponent } from './marvel/marvel.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MarvelService } from './marvel.service';
+import { FormsModule } from '@angular/forms';
+import { HighlightSearch } from './marvel/highilight.pipe';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MarvelComponent,
+    HighlightSearch
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+
   ],
-  providers: [],
+  providers: [MarvelService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

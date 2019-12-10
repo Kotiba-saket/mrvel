@@ -1,0 +1,28 @@
+<div class="container">
+    <p>Marvel App</p>
+    <div class="left_side">
+            <div>
+                  <div>
+                      <input type="text" [(ngModel)]="query" placeholder="Query..." />
+                      
+                  </div>
+                 
+              </div>
+                  <p>Fount X match:</p>
+                  <ul class="list" style="width: 300px; height: 200px; overflow: auto">
+                        <li tabindex=1 *ngFor='let item of characters; let i = index' (click)='getSelectedChar(item.id,item.description) '>{{item.name}}</li>
+                  </ul>
+                   
+                    <div class="divDescription">
+                        <p>Description</p>
+                         <Span innerHTML="{{content | highlight : query}}" *ngFor ='let item of element' >{{item.description}}</Span> 
+                         
+                    </div>
+                 
+    </div>
+  
+      <div class="right_side">
+            <img id='image' *ngFor ='let item of element' src="{{item.thumbnail.path + '.' + item.thumbnail.extension}}" class="rounded float-right" alt='{{item.thumbnail.extension}}'>
+      </div>
+     
+</div>

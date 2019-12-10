@@ -1,0 +1,45 @@
+.container{
+   background-color:#f2f2f2;
+    height: 900px;
+    width:80%; 
+    margin-left: 10%
+}
+.right_side{
+    float: right;
+}
+.left_side {
+float: left;
+}
+#image {
+    width: 600px;
+    height: 500px;
+}
+.divDescription{
+    width: 300px;
+}
+.list{
+    list-style-type: none;
+    scrollbar-width: 2px
+}
+.list li{
+    cursor: pointer; 
+    
+    padding: 10px
+}
+.list:visited{
+    background-color: #39aea8;
+}
+.active{
+    background-color: blue
+}
+li:focus {
+    background-color: rgb(63, 136, 245);
+    color: white;
+    outline: none;
+  }
+.highlightText {
+    background: yellow;
+}
+mark {
+   background-color: yellow;
+}
